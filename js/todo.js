@@ -9,9 +9,20 @@ const toDoEventHandler = {
   saveToDos: () => {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
   },
+  loadToDos: () => {
+    const savedToDos = localStorage.getItem(TODOS_KEY);
+
+    if (savedToDos !== null) {
+      const parsedToDos = JSON.parse(savedToDos);
+      toDos = parsedToDos;
+      parsedToDos.forEach(toDoEventHandler.paintToDo);
+    }
+  },
   deleteToDo: (event) => {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDos) => toDos.id !== parseInt(li.id));
+    toDoEventHandler.saveToDos();
   },
   paintToDo: (newTodo) => {
     const li = document.createElement("li");
@@ -21,7 +32,9 @@ const toDoEventHandler = {
     button.innerText = "❌";
     button.addEventListener("click", toDoEventHandler.deleteToDo);
 
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
+    li.id = newTodo.id;
+
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
@@ -30,20 +43,15 @@ const toDoEventHandler = {
     event.preventDefault();
 
     const newTodo = toDoInput.value;
+    const newTodoObj = {
+      text: newTodo,
+      id: Date.now(),
+    };
     toDoInput.value = "";
-    toDos.push(newTodo);
+    toDos.push(newTodoObj);
 
-    toDoEventHandler.paintToDo(newTodo);
+    toDoEventHandler.paintToDo(newTodoObj);
     toDoEventHandler.saveToDos();
-  },
-  loadToDos: () => {
-    const savedToDos = localStorage.getItem(TODOS_KEY);
-    console.log(savedToDos);
-    if (savedToDos !== null) {
-      const parsedToDos = JSON.parse(savedToDos);
-      toDos = parsedToDos;
-      parsedToDos.forEach(toDoEventHandler.paintToDo);
-    }
   },
 };
 
