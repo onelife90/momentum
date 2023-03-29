@@ -36,14 +36,16 @@ const toDoEventHandler = {
     toDoEventHandler.paintToDo(newTodo);
     toDoEventHandler.saveToDos();
   },
+  loadToDos: () => {
+    const savedToDos = localStorage.getItem(TODOS_KEY);
+    console.log(savedToDos);
+    if (savedToDos !== null) {
+      const parsedToDos = JSON.parse(savedToDos);
+      toDos = parsedToDos;
+      parsedToDos.forEach(toDoEventHandler.paintToDo);
+    }
+  },
 };
 
 toDoForm.addEventListener("submit", toDoEventHandler.handleToDoSubmit);
-
-const savedToDos = localStorage.getItem(TODOS_KEY);
-console.log(savedToDos);
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(toDoEventHandler.paintToDo);
-}
+toDoEventHandler.loadToDos();
