@@ -8,7 +8,7 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 const greetingEventHandler = {
   paintGreetings: (username) => {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Hello agent, ${username}`;
     greeting.classList.remove(HIDDEN_USERNAME);
   },
   onLoginSubmit: (event) => {
