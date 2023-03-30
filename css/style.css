@@ -1,3 +1,34 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  position: absolute;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 100%;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 100%) {
+  img {
+    left: 50%;
+    margin-left: 50%;
+  }
+}
+
 .hidden {
   display: none;
 }
