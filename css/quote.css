@@ -1,0 +1,22 @@
+#quote {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 90%;
+  bottom: 2%;
+  left: 10%;
+  right: 10%;
+}
+
+#quote span:first-child {
+  color: var(--main-color);
+  margin: 10px 0px;
+  font-size: 20px;
+}
+
+#quote span:last-child {
+  color: var(--main-color);
+  margin: 10px 0px;
+}

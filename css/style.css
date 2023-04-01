@@ -5,6 +5,7 @@
 @import "login.css";
 @import "greetings.css";
 @import "todo.css";
+@import "quote.css";
 
 body {
   height: 100vh;
@@ -14,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Rajdhani", sans-serif;
+  position: relative;
 }
 
 img {
