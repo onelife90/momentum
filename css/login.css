@@ -8,7 +8,7 @@
   margin: 50px 0px;
 }
 
-#login-form input:first-child {
+#login-form input {
   background-color: transparent;
   border: none;
   width: auto;
@@ -19,9 +19,10 @@
   text-align: center;
 }
 
-#login-form input:first-child::placeholder {
+#login-form input::placeholder {
   opacity: 0.5;
   color: var(--main-color);
+  font-family: "Rajdhani", sans-serif;
 }
 
 #login-form input:first-child:focus {
@@ -44,6 +45,7 @@
 #login-form button span {
   color: gold;
   font-size: 20px;
+  font-family: "Rajdhani", sans-serif;
   padding: 0 20px;
   animation: moveLeft 8s linear infinite;
 }

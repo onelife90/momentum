@@ -24,10 +24,14 @@ const toDoEventHandler = {
     toDos = toDos.filter((toDos) => toDos.id !== parseInt(li.id));
     toDoEventHandler.saveToDos();
   },
+
   paintToDo: (newTodo) => {
     const li = document.createElement("li");
+    const input = document.createElement("input");
     const span = document.createElement("span");
     const button = document.createElement("button");
+
+    input.type = "checkbox";
 
     button.innerText = "❌";
     button.addEventListener("click", toDoEventHandler.deleteToDo);
@@ -35,16 +39,17 @@ const toDoEventHandler = {
     span.innerText = newTodo.text;
     li.id = newTodo.id;
 
+    li.appendChild(input);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
   },
+
   handleToDoSubmit: (event) => {
     event.preventDefault();
 
-    const newTodo = toDoInput.value;
     const newTodoObj = {
-      text: newTodo,
+      text: toDoInput.value,
       id: Date.now(),
     };
     toDoInput.value = "";

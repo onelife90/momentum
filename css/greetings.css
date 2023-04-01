@@ -1,0 +1,5 @@
+#greeting {
+  color: var(--main-color);
+  font-size: 60px;
+  margin: 30px 0px;
+}

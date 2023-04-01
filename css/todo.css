@@ -1,0 +1,51 @@
+.todos {
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+#todo-form input {
+  background-color: transparent;
+  border: none;
+  width: auto;
+  height: 30px;
+  font-size: 30px;
+  margin: 20px 20px;
+  outline: none;
+  color: var(--main-color);
+}
+
+#todo-form input::placeholder {
+  opacity: 0.5;
+  color: var(--main-color);
+  letter-spacing: 2.5px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+#todo-list {
+  color: var(--main-color);
+  font-size: 25px;
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+#todo-list li {
+  margin-top: 15px;
+}
+
+#todo-list span {
+  margin: 0px 10px;
+}
+
+#todo-list button {
+  background-color: transparent;
+  border: none;
+}
+
+#todo-list input:checked + span {
+  text-decoration-line: line-through;
+  color: aqua;
+}
