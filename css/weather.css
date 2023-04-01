@@ -1,0 +1,13 @@
+#weather {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+}
+
+#weather span {
+  display: flex;
+  flex-direction: column;
+  color: var(--main-color);
+  font-size: 20px;
+  margin: 10px 0px;
+}

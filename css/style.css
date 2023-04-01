@@ -6,6 +6,7 @@
 @import "greetings.css";
 @import "todo.css";
 @import "quote.css";
+@import "weather.css";
 
 body {
   height: 100vh;
