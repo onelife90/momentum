@@ -1,11 +1,19 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
+
 const TODOS_KEY = "todos";
 
 let toDos = [];
 
 const toDoEventHandler = {
+  changeCheckBoxes: (event) => {
+    const input = event.target;
+    const item = toDos.find((item) => item.id == parseInt(input.id));
+
+    item.checked = !item.checked;
+    toDoEventHandler.saveToDos();
+  },
   saveToDos: () => {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
   },
@@ -38,6 +46,8 @@ const toDoEventHandler = {
 
     span.innerText = newTodo.text;
     li.id = newTodo.id;
+    input.id = newTodo.id;
+    input.checked = newTodo.checked;
 
     li.appendChild(input);
     li.appendChild(span);
@@ -51,6 +61,7 @@ const toDoEventHandler = {
     const newTodoObj = {
       text: toDoInput.value,
       id: Date.now(),
+      checked: false,
     };
     toDoInput.value = "";
     toDos.push(newTodoObj);
@@ -61,4 +72,5 @@ const toDoEventHandler = {
 };
 
 toDoForm.addEventListener("submit", toDoEventHandler.handleToDoSubmit);
+toDoList.addEventListener("change", toDoEventHandler.changeCheckBoxes);
 toDoEventHandler.loadToDos();
