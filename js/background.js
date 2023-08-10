@@ -1,7 +1,11 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
-const chosenImage = images[Math.floor(Math.random() * images.length)];
-
+const imageSrc = [
+  "https://bit.ly/3qqOlR3",
+  "https://bit.ly/3s7M6mk",
+  "https://url.kr/k67w4x",
+  "https://url.kr/txmd1g",
+];
+const chosenImage = imageSrc[Math.floor(Math.random() * imageSrc.length)];
 const bgImage = document.createElement("img");
-bgImage.src = `img/${chosenImage}`;
 
+bgImage.src = `${chosenImage}`;
 document.body.appendChild(bgImage);
