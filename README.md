@@ -38,8 +38,7 @@
 </div>
 <section>
     <div align=center>
-        <video src="https://github.com/onelife90/momentum/assets/64455878/05e92a40-1cc4-4540-9648-06f046c7c604.gif"></video>
-</section>
+        <video src="https://user-images.githubusercontent.com/64455878/259676004-05e92a40-1cc4-4540-9648-06f046c7c604.gif" controls></video>
 <br>
 <br>
 
@@ -51,23 +50,27 @@
         <th> Summary </th>
         <tr>
             <td>1</td> 
-            <td>BEM<br>(Block Element Modifier)</td> 
+            <td>JavaScript Object</td> 
             <td>
-            <em>- .btn {}</em>: Block element<br>
-            <em>- .btn__price {}</em>: ‘price’ element<br>
-            <em>- .btn--orange {}</em>: modifier
+            - ES6: Arrow functions within an object<br>
+            - Use dependent functions to represent complex functions within an object<br>
+            <em>ex</em>: toDoEventHandler<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└ changeCheckBoxes<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└ saveToDos<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;└ loadToDos<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└ deleteToDo<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└ paintToDo<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└ handleToDoSubmit
             </td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Components</td>
-            <td>Importing components into smaller units is easy to manage<br>
-                <em>ex</em>:@import "components/nav-bar.css";
-            </td>
+            <td>JSON<br>(JavaScript Object Notation)</td>
+            <td>Convert JavaScript Object literals to parsing or stringify</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>Z-index</td>
-            <td>Screen layout order can be set with z-axis</td>
+            <td>Vanilla JavaScript</td>
+            <td>Using only JavaScript without using libraries or frameworks</td>
         </tr>
 </div>
