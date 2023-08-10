@@ -38,7 +38,7 @@
 </div>
 <section>
     <div align=center>
-        <video src="https://user-images.githubusercontent.com/64455878/259676004-05e92a40-1cc4-4540-9648-06f046c7c604.gif" controls></video>
+        <img src="https://user-images.githubusercontent.com/64455878/259676004-05e92a40-1cc4-4540-9648-06f046c7c604.gif" />
 <br>
 <br>
 
